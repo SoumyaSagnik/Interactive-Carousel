@@ -9,12 +9,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-image: url('images/background.webp');
+    background: #b694945c;
+    background: #b7b7ee8c;
+    background: linear-gradient(135deg, #b694945c, rgba(183, 183, 238, 0.3));
 }
 
 img {
-    height: 80vh;
-    width: 70vw;
+    height: 100%;
+    width: 100%;
     display: block;
     object-fit: cover;
     object-position: center;
@@ -40,11 +42,13 @@ img {
 }
 
 .carousel>button.left {
-    left: 2.7rem;
+    position: absolute;
+    left: 2.5%;
 }
 
 .carousel>button.right {
-    right: 2.7rem;
+    position: absolute;
+    right: 5.5%;
 }
 
 ul {
@@ -55,9 +59,8 @@ ul {
 
 .carousel {
     margin-top: 3%;
-    margin-left: 15%;
-    width: 70vw;
-    height: 80vh;
+    width: 48.375rem;
+    height: 48.375rem;
     position: relative;
     display: flex;
     justify-content: center;
@@ -69,7 +72,7 @@ ul {
     opacity: 0;
     transition: 700ms opacity ease-in-out;
     transition-delay: 200ms;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 1);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .7);
 }
 
 .slide[data-active] {
@@ -80,31 +83,203 @@ ul {
 
 .radio {
     margin-top: 1%;
+    outline: none;
+    cursor: pointer;
+    filter: grayscale(1);
 }
 
 .radioContainer {
-    margin-left: 43%;
+    margin-top: .75%;
+    width: 48.375rem;
+    display: flex;
+    justify-content: center;
 }
 
 .time {
-    margin-top: 2%;
+    margin-top: 5%;
     font-size: 2rem;
-    margin-left: 5%;
     border-radius: 10%;
     cursor: pointer;
+    border: none;
+    box-shadow: .1rem .1rem 0 0 inset rgba(0, 0, 0, .5), -.1rem -.1rem 0 0 inset rgba(0, 0, 0, .5);
+}
+
+input[type="radio"] {
+    margin-right: 0;
+}
+
+.time:active {
+    scale: .98;
 }
 
 .timeContainer {
-    margin-left: 37%;
+    margin: .5% 0;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+
 }
 
-.time[data-active] {
+.time[data-active],
+.time[data-active]:hover {
     background-color: ghostwhite;
-    border: 2px solid steelblue;
-    box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.9);
+    box-shadow: .1rem .1rem 0 0 inset #000, -.1rem -.1rem 0 0 inset #000;
+    transform: translateY(-.15rem);
 }
 
 .time:hover {
     background-color: ghostwhite;
     box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.6);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:785px) {
+    .carousel {
+        width: 46rem;
+    }
+
+    .left,
+    .right {
+        scale: .8;
+    }
+}
+
+@media screen and (max-width:770px) {
+    .carousel {
+        width: 44rem;
+    }
+
+    .radioContainer {
+        scale: .9;
+    }
+
+    .left,
+    .right {
+        scale: .75;
+    }
+}
+
+@media screen and (max-width:710px) {
+    .carousel {
+        margin-top: 4%;
+        width: 40rem;
+        height: 48rem;
+    }
+
+    .radioContainer {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .carousel {
+        width: 36rem;
+    }
+
+    .left,
+    .right {
+        scale: .6;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .carousel {
+        margin-top: 15%;
+        width: 32rem;
+    }
+
+    .radioContainer {
+        scale: .7;
+    }
+
+    .left,
+    .right {
+        scale: .5;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .carousel {
+        margin-top: 20%;
+        width: 28rem;
+        height: 44rem;
+    }
+
+    .radioContainer {
+        scale: .6;
+    }
+
+    .left,
+    .right {
+        scale: .5;
+    }
+}
+
+@media screen and (max-width:455px) {
+    .carousel {
+        margin-top: 25%;
+        width: 24rem;
+        height: 36rem;
+    }
+
+    .left,
+    .right {
+        scale: .4;
+    }
+
+    .timeContainer {
+        gap: 1rem;
+    }
+
+    .time {
+        scale: .8;
+    }
+}
+
+@media screen and (max-width:390px) {
+    .carousel {
+        margin-top: 10%;
+        width: 20rem;
+    }
+
+    .radioContainer {
+        scale: .5;
+    }
+
+    .left,
+    .right {
+        scale: .4;
+    }
+
+    .timeContainer {
+        gap: .5rem;
+    }
+
+    .time {
+        scale: .8;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .carousel {
+        margin-top: 40%;
+        width: 18rem;
+        height: 30rem;
+    }
+
+    .radioContainer {
+        scale: .45;
+    }
+
+    .left,
+    .right {
+        scale: .3;
+    }
 }
