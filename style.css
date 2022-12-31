@@ -82,7 +82,7 @@ ul {
     opacity: 0;
     transition: 700ms opacity ease-in-out;
     transition-delay: 200ms;
-    box-shadow: 0 0 1.5rem rgba(0, 0, 0, .7);
+    box-shadow: 0 0 .5rem .15rem rgba(0, 0, 0, .7);
 }
 
 .slide[data-active] {
