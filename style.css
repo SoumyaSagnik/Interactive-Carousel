@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
 *,
 *::before,
 *::after {
@@ -46,9 +48,17 @@ img {
     left: 2.5%;
 }
 
+.carousel>button.left:active {
+    scale: .95;
+}
+
 .carousel>button.right {
     position: absolute;
     right: 5.5%;
+}
+
+.carousel>button.right:active {
+    scale: .95;
 }
 
 ul {
@@ -96,6 +106,8 @@ ul {
 }
 
 .time {
+    font-family: 'EB Garamond', serif;
+    padding: 0 .5rem;
     margin-top: 5%;
     font-size: 2rem;
     border-radius: 10%;
@@ -124,8 +136,10 @@ input[type="radio"] {
 .time[data-active],
 .time[data-active]:hover {
     background-color: ghostwhite;
-    box-shadow: .1rem .1rem 0 0 inset #000, -.1rem -.1rem 0 0 inset #000;
-    transform: translateY(-.15rem);
+    box-shadow: .1rem .1rem 0 0 inset slateblue, -.1rem -.1rem 0 0 inset orchid,
+        0 0 .25rem .05rem rgba(0, 0, 0, .7);
+    background: black;
+    color: #fff;
 }
 
 .time:hover {
